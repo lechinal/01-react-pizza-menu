@@ -1,66 +1,76 @@
 import React from 'react';
 import Pizza from 'components/Pizza';
 
-// import spinaciImg from '../images/pizzas/spinaci.jpg';
-// import funghiImg from '../images/pizzas/funghi.jpg';
+import spinaciImg from '../images/pizzas/spinaci.jpg';
+import funghiImg from '../images/pizzas/funghi.jpg';
+import focacciaImg from '../images/pizzas/focaccia.jpg';
+import margherittaImg from '../images/pizzas/margherita.jpg';
+import prosciuttoImg from '../images/pizzas/prosciutto.jpg';
+import salaminoImg from '../images/pizzas/salamino.jpg';
 
 const pizzaData = [
   {
     name: 'Pizza Focaccia',
     ingredients: 'Bread with italian olive oil and rosemary',
     price: 6,
-    photoName: 'pizzas/focaccia.jpg',
+    photoName: focacciaImg,
     soldOut: false,
   },
   {
     name: 'Pizza Margherita',
     ingredients: 'Tomato and mozarella',
     price: 10,
-    photoName: 'pizzas/margherita.jpg',
+    photoName: margherittaImg,
     soldOut: false,
   },
   {
     name: 'Pizza Spinaci',
     ingredients: 'Tomato, mozarella, spinach, and ricotta cheese',
     price: 12,
-    photoName: 'pizzas/spinaci.jpg',
+    photoName: spinaciImg,
     soldOut: false,
   },
   {
     name: 'Pizza Funghi',
     ingredients: 'Tomato, mozarella, mushrooms, and onion',
     price: 12,
-    photoName: 'pizzas/funghi.jpg',
+    photoName: funghiImg,
     soldOut: false,
   },
   {
     name: 'Pizza Salamino',
     ingredients: 'Tomato, mozarella, and pepperoni',
     price: 15,
-    photoName: 'pizzas/salamino.jpg',
+    photoName: salaminoImg,
     soldOut: true,
   },
   {
     name: 'Pizza Prosciutto',
     ingredients: 'Tomato, mozarella, ham, aragula, and burrata cheese',
     price: 18,
-    photoName: 'pizzas/prosciutto.jpg',
+    photoName: prosciuttoImg,
     soldOut: false,
   },
 ];
 
 function Menu() {
+  const pizzas = pizzaData;
+  // const pizzas = [];
+  const numPizzas = pizzas.length;
+
   return (
     <menu className="menu">
       <h2>Our Menu</h2>
 
-      <ul className="pizzas">
-        {pizzaData.map(pizza => (
-          <Pizza pizzaObj={pizza} key={pizza.name} />
-        ))}
-      </ul>
-
-      <img src="pizzas/spinaci.jpg" alt="test" />
+      {numPizzas > 0 ? (
+        <ul className="pizzas">
+          {pizzas.map(pizza => (
+            <Pizza pizzaObj={pizza} key={pizza.name} />
+          ))}
+        </ul>
+      ) : (
+        <p>We're still working on our menu. Please come back later 😊</p>
+      )}
 
       {/* <Pizza
         name="Pizza Spinaci"
