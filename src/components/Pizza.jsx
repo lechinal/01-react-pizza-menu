@@ -1,4 +1,6 @@
 import React from 'react';
+// import spinaciImg from '../images/pizzas/spinaci.jpg';
+// import funghiImg from '../images/pizzas/funghi.jpg';
 
 function Pizza(props) {
   // console.log(props);
