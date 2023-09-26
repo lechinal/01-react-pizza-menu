@@ -1,10 +1,3 @@
-import React from 'react';
-import Pizza from 'components/Pizza';
-// import pizzaData from '../data/data';
-
-import spinaciImg from '../images/pizzas/spinaci.jpg';
-import funghiImg from '../images/pizzas/funghi.jpg';
-
 const pizzaData = [
   {
     name: 'Focaccia',
@@ -49,33 +42,3 @@ const pizzaData = [
     soldOut: false,
   },
 ];
-
-function Menu() {
-  return (
-    <menu className="menu">
-      <h2>Our Menu</h2>
-
-      <div>
-        {pizzaData.map(pizza => (
-          <Pizza pizzaObj={pizza} key={pizza.name} />
-        ))}
-      </div>
-
-      {/* <Pizza
-        name="Pizza Spinaci"
-        ingredients="Tomato, mozarella, spinach, and ricotta cheese"
-        photoName={spinaciImg}
-        price={10}
-      />
-
-      <Pizza
-        name="Pizza Fungi"
-        ingredients="Tomato, mozarella, mushrooms, and onion"
-        price={12}
-        photoName={funghiImg}
-      /> */}
-    </menu>
-  );
-}
-
-export default Menu;
