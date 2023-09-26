@@ -1,0 +1,17 @@
+import React from 'react';
+
+function Pizza(props) {
+  // console.log(props);
+  return (
+    <div className="pizza">
+      <img src="images/pizzas/spinaci.jpg" alt={props.name} />
+      <div>
+        <h3>{props.name}</h3>
+        <p>{props.ingredients}</p>
+        <span> {props.price} </span>
+      </div>
+    </div>
+  );
+}
+
+export default Pizza;
