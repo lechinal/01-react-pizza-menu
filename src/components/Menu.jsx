@@ -2,8 +2,8 @@ import React from 'react';
 import Pizza from 'components/Pizza';
 // import pizzaData from '../data/data';
 
-import spinaciImg from '../images/pizzas/spinaci.jpg';
-import funghiImg from '../images/pizzas/funghi.jpg';
+// import spinaciImg from '../images/pizzas/spinaci.jpg';
+// import funghiImg from '../images/pizzas/funghi.jpg';
 
 const pizzaData = [
   {
@@ -55,11 +55,11 @@ function Menu() {
     <menu className="menu">
       <h2>Our Menu</h2>
 
-      <div>
+      <ul className="pizzas">
         {pizzaData.map(pizza => (
           <Pizza pizzaObj={pizza} key={pizza.name} />
         ))}
-      </div>
+      </ul>
 
       {/* <Pizza
         name="Pizza Spinaci"
