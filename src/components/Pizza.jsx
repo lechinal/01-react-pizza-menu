@@ -4,7 +4,7 @@ function Pizza(props) {
   // console.log(props);
   return (
     <div className="pizza">
-      <img src="images/pizzas/spinaci.jpg" alt={props.name} />
+      <img src={props.photoName} alt={props.name} />
       <div>
         <h3>{props.name}</h3>
         <p>{props.ingredients}</p>

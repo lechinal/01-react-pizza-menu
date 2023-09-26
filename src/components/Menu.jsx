@@ -1,5 +1,7 @@
 import React from 'react';
 import Pizza from 'components/Pizza';
+import spinaciImg from '../images/pizzas/spinaci.jpg';
+import funghiImg from '../images/pizzas/funghi.jpg';
 
 function Menu() {
   return (
@@ -9,14 +11,14 @@ function Menu() {
       <Pizza
         name="Pizza Spinaci"
         ingredients="Tomato, mozarella, spinach, and ricotta cheese"
-        photoName="images/pizzas/spinaci.jpg"
+        photoName={spinaciImg}
         price={10}
       />
       <Pizza
         name="Pizza Fungi"
         ingredients="Tomato, mozarella, mushrooms, and onion"
         price={12}
-        photoName="images/pizzas/funghi.jpg"
+        photoName={funghiImg}
       />
     </menu>
   );
